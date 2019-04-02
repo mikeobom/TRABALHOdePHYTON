@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+
+p1 = int(input("Nota P1 \n"))
+
+ma1 = int(input("Nota Ma1 \n"))
+
+mb1 = int(input("Nota Mb1 \n"))
+
+p2 = int(input("Nota P2 \n"))
+
+ma2 = int(input("Nota Ma2 \n"))
+
+mb2 = int(input("Nota Mb2 \n"))
+
+
+
+qtaula = int(input("Quantidade de aula no semestre \n"))
+
+qtfalta = int(input("Quantidade de falto do aluno no semestre \n"))
+
+
+
+1
+
+if ((p1 > 10) | (p1 < 0) | (ma1 > 10) | (ma1 < 0) | (mb1 > 10) | (mb1 < 0) | (p2 > 10) | (p2 < 0) | (ma2 > 10) | (ma2 < 0) | (mb2 > 10) | (mb2 < 0)):
+
+	print("As notas so pode sem entre 0 e 10")
+
+else:
+
+	a1 = ((p1*70)+(ma1*20)+(mb1*10))/100
+
+	a2 = ((p2*70)+(ma2*20)+(mb2*10))/100
+
+	mf = (a1+2*a2)/3
+
+
+
+	limiteal = qtaula-(qtaula * 75/100)
+
+
+
+	if mf >= 5 and qtfalta <= limiteal:
+
+		print('Aprovado\n')        
+
+	elif mf >= 3 and qtfalta <= limiteal:
+
+		print("Recuperação\n")     
+
+	elif mf < 3 and qtfalta <= limiteal:
+
+	    print("Reprovado por nota\n")
+
+	elif qtfalta > limiteal:
+
+	   print("Reprovado por falta\n")	
